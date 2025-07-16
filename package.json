@@ -1,0 +1,26 @@
+{
+  "name": "modulo3_abpr5_grupo_sala_5",
+  "version": "1.0.0",
+  "description": "Trabajo grupal ABPRO5",
+  "keywords": [
+    "bootstrap"
+  ],
+  "homepage": "https://github.com/gurrutia15/Modulo3_ABPR5_Grupo_Sala_5#readme",
+  "bugs": {
+    "url": "https://github.com/gurrutia15/Modulo3_ABPR5_Grupo_Sala_5/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gurrutia15/Modulo3_ABPR5_Grupo_Sala_5.git"
+  },
+  "license": "ISC",
+  "author": "Grupo Sala 5",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.7"
+  }
+}
