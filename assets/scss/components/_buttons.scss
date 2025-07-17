@@ -1,0 +1,16 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../base/base' as *;
+
+button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: $color-secondary;
+    color: $color-white;
+    border-radius: 20px;
+    border: none;
+    padding: 0.5rem 1rem;
+    box-shadow: $shadow;
+    &:hover {
+    transform: scale(1.1);
+}}
