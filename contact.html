@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te Lo Vendo</title>
+    <link rel="icon" href="assets/images/tlv_icon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .alert-info {
+            display: none;
+        }
+
+        .hero {
+            padding: 2rem;
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero__content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            max-width: 700px;
+
+        }
+
+        .hero__image {
+            width: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .hero__slogan {
+            font-size: 2.5rem;
+            font-style: italic;
+            text-align: center;
+            color: white;
+            text-shadow: 0px 4px 8px gray;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/images/logo_tlv.svg" alt="Te Lo Vendo" width="60" height="auto">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="catalog.html">Catálogo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutus.html">Quienes Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  active" href="contact.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ======================= HERO ======================= -->
+        <div class="container-fluid hero">
+            <div class="hero__content">
+                <img class="hero__image" src="/assets/images/tlv_banner.jpeg" alt="Te Lo Vendo">
+                <p class="hero__slogan">Encuentra lo que necesitas, rápido y seguro</p>
+            </div>
+        </div>
+        <!-- ======================= FORM ======================= -->
+         <div class="container text-center">
+        <section class="form">
+            <div class=" container alert ">
+                <div id="successAlert" class="alert alert-info" role="alert">
+                    Guardado Exitosamente
+                </div>
+            </div>
+            <div class="form__title">
+                <h2>Contáctanos</h2>
+            </div>
+            <div class="form__subtitle">Para mayor información</div>
+            <div class="form__content">
+                <form action="">
+                    <div class="form__item">
+                        <div>
+                            <label class="item__label" for="name">Nombre</label>
+                        </div>
+                        <div>
+                            <input class="form__input" type="text" id="name" placeholder="Maria">
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="">
+                            <label class="item__label__apellido" for="last__name">Apellido</label>
+                        </div>
+                        <div class="">
+                            <input class="form__input" type="text" id="last__name" placeholder="Vargas">
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="">
+                            <label class="item__label" for="comentario">Comentario</label>
+                        </div>
+                        <div class="">
+                            <textarea class="form__textarea" name="" id="comentario" cols="30" rows="10"></textarea>
+                        </div>
+
+                    </div>
+                    <div class="form__item">
+                        <button class="form__button">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </section></div>
+    </main>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
