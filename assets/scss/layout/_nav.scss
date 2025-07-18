@@ -2,11 +2,6 @@
 @use '../abstracts/mixins' as *;
 @use '../base/base' as *;
 
-
-.navbar {
-    background-color: $primary;   
-}
-
 .nav-link {
     color: $color-white;
     &:hover {
