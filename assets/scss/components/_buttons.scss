@@ -1,0 +1,36 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../base/base' as *;
+
+button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: $color-secondary;
+    color: $color-white;
+    border-radius: 20px;
+    border: none;
+    padding: 0.5rem 1rem;
+    box-shadow: $shadow;
+    &:hover {
+    transform: scale(1.1);
+    background-color:$color-accent;
+    color: $color-dark
+}}
+.catalog {
+
+    &__filter-btn {
+    background-color: $color-white;
+    color: $color-secondary;
+    font-size: 1.05rem;
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+    padding: 0.5rem 1rem;
+    box-shadow: $shadow;
+    cursor: pointer;
+    &--active {
+        background-color: $color-secondary;
+        color: white;
+    }
+    }
+}

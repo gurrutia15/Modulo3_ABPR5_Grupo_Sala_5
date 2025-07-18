@@ -1,1 +1,6 @@
-@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+@use '../../../node_modules/bootstrap/scss/bootstrap.scss' with  (
+    $primary: #27AFC9 ,
+    $light: #B0A6A5,
+    $dark:  #6D5C55,
+
+  );
