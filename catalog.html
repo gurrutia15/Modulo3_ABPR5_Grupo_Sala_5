@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Te Lo Vendo</title>
+  <link rel="icon" href="assets/images/tlv_icon.webp" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .hero {
+    padding: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero__content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        max-width: 700px;
+        
+    }
+    .hero__image {
+        width: 300px;
+        object-fit:cover;
+        border-radius: 50%;
+    }
+    .hero__slogan {
+        font-size: 2.5rem;
+        font-style: italic;
+        text-align: center;
+        color: white;
+        text-shadow: 0px 4px 8px gray;
+    }
+  </style>
+  <!-- ======================= HEADER ======================= -->
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/images/logo_tlv.svg" alt="Te Lo Vendo" width="60" height="auto">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="catalog.html">Catálogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html">Quienes Somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ======================= HERO ======================= -->
+    <div class="container-fluid hero">
+      <div class="hero__content">
+        <img class="hero__image" src="/assets/images/tlv_banner.jpeg" alt="Te Lo Vendo">
+        <p class="hero__slogan">Encuentra lo que necesitas, rápido y seguro</p>
+      </div>
+    </div>
+    <!-- ======================= CATÁLOGO ======================= -->
+    <div id="catalog">
+      <section class="catalog">
+        <div class="container my-5">
+          <div class="catalog__title text-center mb-4 py-1">
+            <h3>Nuestro Catálogo</h3>
+          </div>
+          <div class="catalog__filter mb-4 text-center">
+            <button class="catalog__filter-btn catalog__filter-btn--active" data-filter="all">Todos</button>
+            <button class="catalog__filter-btn" data-filter="tecnology">Tecnología</button>
+            <button class="catalog__filter-btn" data-filter="home">Electrodomésticos</button>
+          </div>
+          <div class="container">
+            <div class="row cards">
+              <div class="col-sm-12 col-md-4 mb-4">
+                <div class="card h-100 active" data-category="home">
+                  <img src="assets/images/product1.jpeg" alt="Robot aspirador" class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">Robot Aspirador X300</h3>
+                    <p class="card-text">Aspiradora inteligente con mapeo láser y app control. Ideal para pisos
+                      de hasta 120m².</p>
+                    <p class="h5">$249.990</p>
+                    <button class="">Comprar</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 mb-4">
+                <div class="card h-100 active" data-category="home">
+                  <img src="assets/images/product2.jpeg" alt="Airfryer" class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">Airfryer Digital 5L</h3>
+                    <p class="card-text">Freidora de aire con 8 programas preestablecidos y tecnología 360°
+                      para cocción uniforme.</p>
+                    <p class="h5">$89.990</p>
+                    <button class="">Comprar</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 mb-4">
+                <div class="card h-100 active" data-category="tecnology">
+                  <img src="assets/images/product3.jpeg" alt="Smartwatch Deportivo" class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">Smartwatch Deportivo Pro</h3>
+                    <p class="card-text">Monitor de ritmo cardíaco, GPS integrado y resistencia al agua 50m.
+                      Batería de 7 días.</p>
+                    <p class="h5">$129.990</p>
+                    <button class="">Comprar</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 mb-4">
+                <div class="card h-100 active" data-category="tecnology">
+                  <img src="assets/images/product4.jpeg" alt="" class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">Parlante Bluetooth XSound</h3>
+                    <p class="card-text">Sonido 360° con 20W de potencia. Resistente al agua IPX7 y batería de
+                      15 horas.</p>
+                    <p class="h5">$59.990</p>
+                    <button class="">Comprar</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 mb-4">
+                <div class="card h-100 active" data-category="home">
+                  <img src="assets/images/product5.jpeg" alt="Kit Limpieza Robot" class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">Kit Limpieza para Robot</h3>
+                    <p class="card-text">Incluye 6 paños de microfibra, 2 cepillos y solución limpiadora
+                      compatible con marcas principales.</p>
+                    <p class="h5">$19.990</p>
+                    <button class="">Comprar</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 mb-4">
+                <div class="card h-100 active" data-category="tecnology">
+                  <img src="assets/images/product6.jpeg" alt="Cargador Inalámbrico" class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">Cargador Inalámbrico 3en1</h3>
+                    <p class="card-text">Carga tu smartphone, reloj y audífonos simultáneamente. Potencia 15W.
+                    </p>
+                    <p class="h5">$34.990</p>
+                    <button class="">Comprar</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 mb-4">
+                <div class="card h-100 active" data-category="tecnology">
+                  <img src="assets/images/product7.jpeg" alt="Laptop UltraSlim" class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">Laptop UltraSlim i7</h3>
+                    <p class="card-text">Pantalla de 14" FHD, 16GB RAM, SSD 512GB, Intel Iris Xe. Solo 1.2kg de
+                      peso.</p>
+                    <p class="h5">$899.990</p>
+                    <button class="">Comprar</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 mb-4">
+                <div class="card h-100 active" data-category="home">
+                  <img src="assets/images/product8.jpeg" alt="Robot Cocina" class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">Robot Cocina 12 en 1</h3>
+                    <p class="card-text">Amasa, cocina al vapor, fríe y más. Pantalla táctil y 50 recetas
+                      preprogramadas.</p>
+                    <p class="h5">$249.990</p>
+                    <button class="">Comprar</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 mb-4">
+                <div class="card h-100 active" data-category="tecnology">
+                  <img src="assets/images/product9.jpeg" alt="Monitor Gamer" class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">Monitor Gamer 32" 4K</h3>
+                    <p class="card-text">144Hz, 1ms, HDR600, AMD FreeSync Premium. Incluye soporte ajustable.
+                    </p>
+                    <p class="h5">$459.990</p>
+                    <button class="">Comprar</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 mb-4">
+                <div class="card h-100 active" data-category="home">
+                  <img src="assets/images/product10.jpeg" alt="Cafetera Smart" class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">Cafetera Smart WiFi</h3>
+                    <p class="card-text">Prepara café desde tu app. Molinillo integrado y 6 perfiles de
+                      bebidas.</p>
+                    <p class="h5">$179.990</p>
+                    <button class="">Comprar</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 mb-4">
+                <div class="card h-100 active" data-category="tecnology">
+                  <img src="assets/images/product11.jpeg" alt="SSD Externo" class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">SSD Externo 2TB USB-C</h3>
+                    <p class="card-text">1050MB/s, resistente a golpes y agua. Ideal para gamers y creadores de
+                      contenido.</p>
+                    <p class="h5">$89.990</p>
+                    <button class="">Comprar</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 mb-4">
+                <div class="card h-100 active" data-category="tecnology">
+                  <img src="assets/images/product12.jpeg" alt="Mouse Gaming RGB" class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">Mouse Gaming Pro RGB</h3>
+                    <p class="card-text">16.000 DPI, 8 botones programables, iluminación RGB personalizable y
+                      diseño ergonómico para gaming prolongado.</p>
+                    <p class="h5">$49.990</p>
+                    <button class="">Comprar</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <!-- ======================= FOOTER ======================= -->
+  <footer>
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-lg-9 col-md-12 text-center mt-3">
+              <h5>&copy; 2025 Te Lo Vendo. Todos los derechos reservados.</h5>
+              <p>Diseñado con ♥ para servirte mejor.</p>
+          </div>
+          <div class="col-lg-3 col-md-12 mb-2 text-center">
+            <div class="footer__social">
+              <a href="#" class="footer__link footer__link--twitter"></a>
+              <a href="#" class="footer__link footer__link--facebook"></a>
+              <a href="#" class="footer__link footer__link--linkedin"></a>
+            </div>
+          </div>
+      </div>
+  </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

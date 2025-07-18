@@ -1,0 +1,15 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../base/base' as *;
+
+.nav-link {
+    color: $color-white;
+    &:hover {
+        color: $color-white;
+        text-decoration: underline;
+    }
+    &.active {
+        color: $color-white;
+        text-decoration: underline;
+    }
+} 
