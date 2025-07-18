@@ -34,3 +34,10 @@ document.addEventListener('DOMContentLoaded',function() {
         })
     }
 })
+
+let alert = document.querySelector('.form__button')
+
+alert.addEventListener('click', function(e){
+    e.preventDefault();
+    document.getElementById('successAlert').style.display='block'
+})
