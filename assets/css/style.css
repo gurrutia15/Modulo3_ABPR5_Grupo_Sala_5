@@ -11864,6 +11864,10 @@ main {
   border-radius: 8px;
 }
 
+ul, ol {
+  list-style-type: none;
+}
+
 button {
   cursor: pointer;
   transition: all 0.3s ease;
