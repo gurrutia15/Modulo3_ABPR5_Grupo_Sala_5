@@ -1,0 +1,39 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../base/base' as *;
+@use '../../../node_modules/bootstrap/scss/bootstrap.scss';  
+
+
+
+.hero-autoplay {    
+    width: 100vw;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    
+    .carousel {
+        width: 100%;
+        height: 100%;
+        
+        .carousel-inner {
+            width: 100%;
+            height: 100%;
+            
+            .carousel-item {
+                width: 100%;
+                height: 100%;
+                
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+    }
+}
