@@ -1,14 +1,10 @@
 {
   "name": "modulo3_abpr5_grupo_sala_5",
   "version": "1.0.0",
-<<<<<<< HEAD
-  "description": "",
-=======
   "description": "Trabajo grupal ABPRO5",
   "keywords": [
     "bootstrap"
   ],
->>>>>>> 84da19faad247bdefbf1d073af109f028382dcd6
   "homepage": "https://github.com/gurrutia15/Modulo3_ABPR5_Grupo_Sala_5#readme",
   "bugs": {
     "url": "https://github.com/gurrutia15/Modulo3_ABPR5_Grupo_Sala_5/issues"
@@ -18,11 +14,7 @@
     "url": "git+https://github.com/gurrutia15/Modulo3_ABPR5_Grupo_Sala_5.git"
   },
   "license": "ISC",
-<<<<<<< HEAD
-  "author": "",
-=======
   "author": "Grupo Sala 5",
->>>>>>> 84da19faad247bdefbf1d073af109f028382dcd6
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
@@ -30,7 +22,6 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.7",
-<<<<<<< HEAD
     "braces": "^3.0.3",
     "chokidar": "^4.0.3",
     "detect-libc": "^1.0.3",
@@ -46,10 +37,5 @@
     "sass": "^1.89.2",
     "source-map-js": "^1.2.1",
     "to-regex-range": "^5.0.1"
-  },
-  "devDependencies": {}
-=======
-    "sass": "^1.89.2"
   }
->>>>>>> 84da19faad247bdefbf1d073af109f028382dcd6
 }
