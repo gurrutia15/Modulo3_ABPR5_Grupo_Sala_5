@@ -1,18 +1,18 @@
 // catalogo
 
 const productos = [
-  { id: '001', imagen: '../assets/images/product1.jpeg', nombre: "Robot Aspirador X300", codigo: "T001", descripcion: "Aspiradora inteligente con mapeo láser y app control. Ideal para pisos de hasta 120m².", precio: 249990 },
-  { id: '002', imagen: '../assets/images/product2.jpeg', nombre: "Airfryer Digital 5L", codigo: "T002", descripcion: "Freidora de aire con 8 programas preestablecidos y tecnología 360° para cocción uniforme.", precio: 89990 },
-  { id: '003', imagen: '../assets/images/product3.jpeg', nombre: "Smartwatch Deportivo Pro", codigo: "T003", descripcion: "Monitor de ritmo cardíaco, GPS integrado y resistencia al agua 50m. Batería de 7 días.", precio: 129990 },
-  { id: '004', imagen: '../assets/images/product4.jpeg', nombre: "Parlante Bluetooth XSound", codigo: "T004", descripcion: "Sonido 360° con 20W de potencia. Resistente al agua IPX7 y batería de 15 horas.", precio: 59990 },
-  { id: '005', imagen: '../assets/images/product5.jpeg', nombre: "Kit Limpieza para Robot", codigo: "T005", descripcion: "Incluye 6 paños de microfibra, 2 cepillos y solución limpiadora compatible con marcas principales.", precio: 19990 },
-  { id: '006', imagen: '../assets/images/product6.jpeg', nombre: "Cargador Inalámbrico 3en1", codigo: "T006", descripcion: "Carga tu smartphone, reloj y audífonos simultáneamente. Potencia 15W.", precio: 34990 },
-  { id: '007', imagen: '../assets/images/product7.jpeg', nombre: "Laptop UltraSlim i7", codigo: "T007", descripcion: "Pantalla de 14' FHD, 16GB RAM, SSD 512GB, Intel Iris Xe. Solo 1.2kg de peso.", precio: 899990 },
-  { id: '008', imagen: '../assets/images/product8.jpeg', nombre: "Robot Cocina 12 en 1", codigo: "T008", descripcion: "Amasa, cocina al vapor, fríe y más. Pantalla táctil y 50 recetas preprogramadas.", precio: 249990 },
-  { id: '009', imagen: '../assets/images/product9.jpeg', nombre: "Monitor Gamer 32' 4K", codigo: "T009", descripcion: "144Hz, 1ms, HDR600, AMD FreeSync Premium. Incluye soporte ajustable.", precio: 459990 },
-  { id: '010', imagen: '../assets/images/product10.jpeg', nombre: "Cafetera Smart WiFi", codigo: "T010", descripcion: "Prepara café desde tu app. Molinillo integrado y 6 perfiles de bebidas.", precio: 179990 },
-  { id: '011', imagen: '../assets/images/product11.jpeg', nombre: "SSD Externo 2TB USB-C", codigo: "T011", descripcion: "1050MB/s, resistente a golpes y agua. Ideal para gamers y creadores de contenido.", precio: 89990 },
-  { id: '012', imagen: '../assets/images/product12.jpeg', nombre: "Mouse Gaming Pro RGB", codigo: "T012", descripcion: "16.000 DPI, 8 botones programables, iluminación RGB personalizable y diseño ergonómico para gaming prolongado.", precio: 49990 }
+  { id: '001', imagen: './assets/images/product1.jpeg', nombre: "Robot Aspirador X300", codigo: "T001", descripcion: "Aspiradora inteligente con mapeo láser y app control. Ideal para pisos de hasta 120m².", precio: 249990 },
+  { id: '002', imagen: './assets/images/product2.jpeg', nombre: "Airfryer Digital 5L", codigo: "T002", descripcion: "Freidora de aire con 8 programas preestablecidos y tecnología 360° para cocción uniforme.", precio: 89990 },
+  { id: '003', imagen: './assets/images/product3.jpeg', nombre: "Smartwatch Deportivo Pro", codigo: "T003", descripcion: "Monitor de ritmo cardíaco, GPS integrado y resistencia al agua 50m. Batería de 7 días.", precio: 129990 },
+  { id: '004', imagen: './assets/images/product4.jpeg', nombre: "Parlante Bluetooth XSound", codigo: "T004", descripcion: "Sonido 360° con 20W de potencia. Resistente al agua IPX7 y batería de 15 horas.", precio: 59990 },
+  { id: '005', imagen: './assets/images/product5.jpeg', nombre: "Kit Limpieza para Robot", codigo: "T005", descripcion: "Incluye 6 paños de microfibra, 2 cepillos y solución limpiadora compatible con marcas principales.", precio: 19990 },
+  { id: '006', imagen: './assets/images/product6.jpeg', nombre: "Cargador Inalámbrico 3en1", codigo: "T006", descripcion: "Carga tu smartphone, reloj y audífonos simultáneamente. Potencia 15W.", precio: 34990 },
+  { id: '007', imagen: './assets/images/product7.jpeg', nombre: "Laptop UltraSlim i7", codigo: "T007", descripcion: "Pantalla de 14' FHD, 16GB RAM, SSD 512GB, Intel Iris Xe. Solo 1.2kg de peso.", precio: 899990 },
+  { id: '008', imagen: './assets/images/product8.jpeg', nombre: "Robot Cocina 12 en 1", codigo: "T008", descripcion: "Amasa, cocina al vapor, fríe y más. Pantalla táctil y 50 recetas preprogramadas.", precio: 249990 },
+  { id: '009', imagen: './assets/images/product9.jpeg', nombre: "Monitor Gamer 32' 4K", codigo: "T009", descripcion: "144Hz, 1ms, HDR600, AMD FreeSync Premium. Incluye soporte ajustable.", precio: 459990 },
+  { id: '010', imagen: './assets/images/product10.jpeg', nombre: "Cafetera Smart WiFi", codigo: "T010", descripcion: "Prepara café desde tu app. Molinillo integrado y 6 perfiles de bebidas.", precio: 179990 },
+  { id: '011', imagen: './assets/images/product11.jpeg', nombre: "SSD Externo 2TB USB-C", codigo: "T011", descripcion: "1050MB/s, resistente a golpes y agua. Ideal para gamers y creadores de contenido.", precio: 89990 },
+  { id: '012', imagen: './assets/images/product12.jpeg', nombre: "Mouse Gaming Pro RGB", codigo: "T012", descripcion: "16.000 DPI, 8 botones programables, iluminación RGB personalizable y diseño ergonómico para gaming prolongado.", precio: 49990 }
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
