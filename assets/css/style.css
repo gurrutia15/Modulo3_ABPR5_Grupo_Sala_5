@@ -11906,13 +11906,12 @@ button:hover {
   flex-wrap: wrap;
 }
 
-.card {
-  display: none;
-}
-.card.active {
-  display: block;
-}
-
+/*.card {
+    display: none; 
+    &.active {
+        display: block;
+    }
+}*/
 .nav-link {
   color: #FFFFFF;
 }
