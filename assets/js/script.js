@@ -32,17 +32,22 @@ document.addEventListener('DOMContentLoaded', function() {
                         <h4 class="text-primary mt-3">$${product.precio.toLocaleString('es-CL')}</h4>
                     </div>
                     <div class="card-footer bg-white border-0">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="input-group" style="width: 130px;">
-                                <button class="btn btn-outline-secondary minus-btn" type="button">-</button>
-                                <input type="number" class="form-control text-center quantity-input" value="1" min="1">
-                                <button class="btn btn-outline-secondary plus-btn" type="button">+</button>
-                            </div>
-                            <button class="btn btn-primary" data-id="${product.id}">
-                                Agregar
-                            </button>
+                        <!-- Línea 1: checkbox y label -->
+                        <div class="form-check mb-2">
+                          <input type="checkbox" class="form-check-input border-dark" id="chk-${product.id}">
+                          <label class="form-check-label" for="chk-${product.id}">Cantidad</label>
                         </div>
-                    </div>
+
+                        <!-- Línea 2: input-group y botón -->
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="input-group" style="width: 9.7rem;">
+                            <button class="btn btn-outline-secondary minus-btn" type="button">-</button>
+                            <input type="number" class="form-control text-center quantity-input" value="1" min="1" id="qty-${product.id}">
+                            <button class="btn btn-outline-secondary plus-btn" type="button">+</button>
+                          </div>
+                          <button class="btn btn-primary" data-id="${product.id}">Agregar</button>
+                        </div>
+                      </div>
                 </div>
             `;
             productList.appendChild(col);
