@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Te Lo Vendo</title>
+  <link rel="icon" href="assets/images/tlv_icon.webp" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+<body>
+    <!-- ======================= HEADER ======================= -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/images/logo_tlv.svg" alt="Te Lo Vendo" width="60" height="auto">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="catalog.html">Catálogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html">Sobre nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ======================= HERO ======================= -->
+    <div class="container-fluid hero">
+      <div class="hero__content">
+        <img class="hero__image" src="./assets/images/tlv_banner.jpeg" alt="Te Lo Vendo">
+        <p class="hero__slogan">Encuentra lo que necesitas, rápido y seguro</p>
+      </div>
+    </div>
+    <!-- ======================= CATÁLOGO ======================= -->
+    <div id="catalog">
+      <section class="catalog">
+        <div class="container my-5">
+          <div class="catalog__title text-center mb-4 py-1">
+            <h3>Nuestro Catálogo</h3>
+          </div>
+          
+          <div class="container">
+            <div class="row cards" id="catalogo_productos"></div>
+          </div>      
+        </div>
+      </section>
+    </div>
+  </main>
+  <!-- ======================= FOOTER ======================= -->
+  <footer>
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-lg-9 col-md-12 text-center mt-3">
+              <h5>&copy; 2025 Te Lo Vendo. Todos los derechos reservados.</h5>
+              <p>Diseñado con ♥ para servirte mejor.</p>
+          </div>
+          <div class="col-lg-3 col-md-12 mb-2 text-center">
+            <div class="footer__social">
+              <a href="#" class="footer__link footer__link--twitter"></a>
+              <a href="#" class="footer__link footer__link--facebook"></a>
+              <a href="#" class="footer__link footer__link--linkedin"></a>
+            </div>
+          </div>
+      </div>
+  </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

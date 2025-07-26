@@ -1,0 +1,11 @@
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/*.card {
+    display: none; 
+    &.active {
+        display: block;
+    }
+}*/
