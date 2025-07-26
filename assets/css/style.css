@@ -12122,6 +12122,49 @@ footer {
     border-radius: 50px;
   }
 }
+.hero {
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 700px;
+}
+
+.hero__image {
+  width: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.hero__slogan {
+  font-size: 2.5rem;
+  font-style: italic;
+  text-align: center;
+  color: white;
+  text-shadow: 0px 4px 8px gray;
+}
+
+.alert-info {
+  display: none;
+}
+
+.btn {
+  color: white;
+}
+
+.btn:hover {
+  background-color: #FFBB02;
+}
+
 .hero-autoplay {
   width: 100vw;
   height: 1200px;
