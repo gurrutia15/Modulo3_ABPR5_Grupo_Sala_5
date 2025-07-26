@@ -1,6 +1,6 @@
 // catalogo
 
-const productos = [
+const products = [
   { id: '001', imagen: './assets/images/product1.jpeg', nombre: "Robot Aspirador X300", codigo: "T001", descripcion: "Aspiradora inteligente con mapeo láser y app control. Ideal para pisos de hasta 120m².", precio: 249990 },
   { id: '002', imagen: './assets/images/product2.jpeg', nombre: "Airfryer Digital 5L", codigo: "T002", descripcion: "Freidora de aire con 8 programas preestablecidos y tecnología 360° para cocción uniforme.", precio: 89990 },
   { id: '003', imagen: './assets/images/product3.jpeg', nombre: "Smartwatch Deportivo Pro", codigo: "T003", descripcion: "Monitor de ritmo cardíaco, GPS integrado y resistencia al agua 50m. Batería de 7 días.", precio: 129990 },
