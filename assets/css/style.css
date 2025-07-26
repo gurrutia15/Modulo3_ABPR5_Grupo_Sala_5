@@ -11968,7 +11968,7 @@ footer {
 
 .hero-autoplay {
   width: 100vw;
-  height: 300px;
+  height: 1200px;
   overflow: hidden;
   position: relative;
   left: 50%;
@@ -11986,7 +11986,7 @@ footer {
 }
 .hero-autoplay .carousel .carousel-inner .carousel-item {
   width: 100%;
-  height: 100%;
+  height: 1200px;
 }
 .hero-autoplay .carousel .carousel-inner .carousel-item img {
   width: 100%;
@@ -11995,6 +11995,46 @@ footer {
   object-position: center;
 }
 
+@media (max-width: 1400px) {
+  .hero-autoplay {
+    height: 1000px;
+  }
+  .hero-autoplay .carousel .carousel-inner .carousel-item {
+    height: 1000px;
+  }
+}
+@media (max-width: 1200px) {
+  .hero-autoplay {
+    height: 800px;
+  }
+  .hero-autoplay .carousel .carousel-inner .carousel-item {
+    height: 800px;
+  }
+}
+@media (max-width: 992px) {
+  .hero-autoplay {
+    height: 600px;
+  }
+  .hero-autoplay .carousel .carousel-inner .carousel-item {
+    height: 600px;
+  }
+}
+@media (max-width: 768px) {
+  .hero-autoplay {
+    height: 400px;
+  }
+  .hero-autoplay .carousel .carousel-inner .carousel-item {
+    height: 400px;
+  }
+}
+@media (max-width: 576px) {
+  .hero-autoplay {
+    height: 300px;
+  }
+  .hero-autoplay .carousel .carousel-inner .carousel-item {
+    height: 300px;
+  }
+}
 .contact__container {
   background-color: #27AFC9;
 }
