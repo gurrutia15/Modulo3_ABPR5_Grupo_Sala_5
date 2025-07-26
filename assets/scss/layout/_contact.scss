@@ -1,0 +1,110 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../vendors/custom' as *;
+
+.contact__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem;
+  background-color: $color-light;
+  
+  .contact__content {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    
+    .contact__title {
+      margin-bottom: 2rem;
+      
+      h2 {
+        font-size: 3rem;
+        color: $color-primary;
+      }
+    }
+    
+    p {
+      font-size: 1.6rem;
+      margin-bottom: 2.5rem;
+      color: $color-dark;
+    }
+    
+    .btn {
+      font-size: 1.6rem;
+      padding: 1rem 2.5rem;
+      display: inline-block;
+      white-space: nowrap; // Evita que se corte el texto
+      min-width: fit-content;
+    }
+  }
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media screen and (max-width: 1200px) {
+  .contact__container {
+    padding: 6rem 1.5rem;
+    
+    .contact__content {
+      .contact__title h2 {
+        font-size: 2.6rem;
+      }
+      
+      p {
+        font-size: 1.5rem;
+      }
+      
+      .btn {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact__container {
+    padding: 5rem 1rem;
+    
+    .contact__content {
+      .contact__title h2 {
+        font-size: 2.2rem;
+      }
+      
+      p {
+        font-size: 1.4rem;
+      }
+      
+      .btn {
+        font-size: 1.4rem;
+        padding: 0.8rem 2rem;
+        white-space: normal; // Permite salto de línea en móviles
+        line-height: 1.3;
+      }
+    }
+  }
+}
+
+// Breakpoint adicional para móviles muy pequeños
+@media screen and (max-width: 480px) {
+  .contact__container {
+    padding: 4rem 0.5rem;
+    
+    .contact__content {
+      .contact__title h2 {
+        font-size: 2rem;
+      }
+      
+      p {
+        font-size: 1.3rem;
+        padding: 0 1rem; // Evita que el texto toque los bordes
+      }
+      
+      .btn {
+        font-size: 1.3rem;
+        padding: 0.8rem 1.5rem;
+        width: calc(100% - 2rem); // Se adapta al ancho disponible
+        max-width: 300px; // Pero no más de 300px
+        margin: 0 1rem;
+      }
+    }
+  }
+}
