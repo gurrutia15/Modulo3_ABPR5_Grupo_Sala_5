@@ -19,10 +19,10 @@ let carrito= [];
 let carritoItems= null;
 
 document.addEventListener('DOMContentLoaded', function() {
-    const productList = document.getElementById('catalogo_productos');
+  const productList = document.getElementById('catalogo_productos');
   carritoItems=document.getElementById('carrito-items')
 
-    if (!productList) {
+  if (!productList) {
     console.error('No se encontró #catalogo_productos');
     return;
   }
