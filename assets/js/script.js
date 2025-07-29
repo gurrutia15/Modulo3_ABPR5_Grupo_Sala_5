@@ -80,7 +80,7 @@ window.agregaCarrito = function(productId) {
       return;
     }
 
-    const producto = productos.find(p => p.id === productId);
+    const producto = products.find(p => p.id === productId);
     if (!producto) return;
 
     const existente = carrito.find(item => item.id === productId);
