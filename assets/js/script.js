@@ -15,9 +15,22 @@ const products = [
   { id: '012', imagen: './assets/images/product12.jpeg', nombre: "Mouse Gaming Pro RGB", codigo: "T012", descripcion: "16.000 DPI, 8 botones programables, iluminación RGB personalizable y diseño ergonómico para gaming prolongado.", precio: 49990 }
 ];
 
+let carrito= [];
+let carritoItems= null;
+
 document.addEventListener('DOMContentLoaded', function() {
-    const productList = document.getElementById('catalogo_productos');
-   
+  const productList = document.getElementById('catalogo_productos');
+  carritoItems=document.getElementById('carrito-items')
+
+  if (!productList) {
+    console.error('No se encontró #catalogo_productos');
+    return;
+  }
+
+  if (!carritoItems) {
+    console.error('No se encontró #carrito-items');
+    return;
+  } 
     if (productList) {
         products.forEach(product => {
             const col = document.createElement('div');
@@ -37,15 +50,14 @@ document.addEventListener('DOMContentLoaded', function() {
                           <input type="checkbox" class="form-check-input border-dark" id="chk-${product.id}">
                           <label class="form-check-label" for="chk-${product.id}">Cantidad</label>
                         </div>
-
-                        <!-- Línea 2: input-group y botón -->
+                        
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="input-group" style="width: 9.7rem;">
                             <button class="btn btn-outline-secondary minus-btn" type="button">-</button>
-                            <input type="number" class="form-control text-center quantity-input" value="1" min="1" id="qty-${product.id}">
+                            <input type="number" class="form-control text-center quantity-input" id="cinput-${product.id}" value="1" min="1">
                             <button class="btn btn-outline-secondary plus-btn" type="button">+</button>
                           </div>
-                          <button class="btn btn-primary" data-id="${product.id}">Agregar</button>
+                          <button class="btn btn-primary" onclick="agregaCarrito('${product.id}')" data-id="${product.id}">Agregar</button>
                         </div>
                       </div>
                 </div>
@@ -55,12 +67,90 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-const alert = document.querySelector('.form__button')
+window.agregaCarrito = function(productId) {
+    const cantidadProducto = document.getElementById(`cinput-${productId}`);
+    if (!cantidadProducto) {
+      console.error(`Input cinput-${productId} no encontrado`);
+      return;
+    }
+
+    const cantidad = parseInt(cantidadProducto.value, 10);
+    if (isNaN(cantidad) || cantidad <= 0) {
+      alert("Cantidad no válida");
+      return;
+    }
+
+    const producto = products.find(p => p.id === productId);
+    if (!producto) return;
+
+    const existente = carrito.find(item => item.id === productId);
+    if (existente) {
+      existente.cantidad += cantidad;
+    } else {
+      carrito.push({ ...producto, cantidad });
+    }
+
+    cantidadProducto.value = 1;
+    renderCarrito();
+  };
+
+  window.cambiarCantidad = function(id, delta) {
+    const input = document.getElementById(`cinput-${id}`);
+    if (!input) return;
+    let valor = parseInt(input.value) + delta;
+    if (valor < 1) valor = 1;
+    input.value = valor;
+  };
+
+  window.renderCarrito = function () {
+    const seccionCarrito = document.getElementById('seccion-carrito')
+  const tabla = document.getElementById('tabla-carrito');
+  const tbody = tabla.querySelector('tbody');
+  if (!tabla) {
+    console.error('Tabla del carrito no encontrada');
+    return;
+  }
+
+  
+  tbody.innerHTML = '';
+
+  if (carrito.length === 0) {
+    seccionCarrito.style.display='none'
+    return
+  } 
+  seccionCarrito.style.display='block'
+
+  carrito.forEach(item => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${item.nombre}</td>
+        <td>${item.cantidad}</td>
+        <td>$${item.precio.toLocaleString('es-CL')}</td>
+        <td>$${(item.precio * item.cantidad).toLocaleString('es-CL')}</td>
+        <td><button class="btn btn-danger" onclick="eliminarDelCarrito('${item.id}')">BORRAR</button></td>
+      `;
+      tbody.appendChild(tr);
+    });  
+};
+
+  window.eliminarDelCarrito = function(productId) {
+    const index = carrito.findIndex(item => item.id === productId);
+    if (index !== -1) {
+      carrito.splice(index, 1);
+      renderCarrito();
+    }
+  };
+
+  renderCarrito();
+
+  // ==============================
+
+/*const alert = document.querySelector('.form__button')
 
 alert.addEventListener('click', function (e) {
   e.preventDefault();
   document.getElementById('successAlert').style.display = 'block'
-})
+}) */
 
 // Modal cierre automáticamente luego del tiempo indicado
 document.addEventListener('DOMContentLoaded', function () {
