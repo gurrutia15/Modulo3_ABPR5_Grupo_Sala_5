@@ -18,6 +18,8 @@ const products = [
 let carrito= [];
 let carritoItems= null;
 
+const carritoSummary = document.getElementById('carrito-summary');
+
 document.addEventListener('DOMContentLoaded', function() {
   const productList = document.getElementById('catalogo_productos');
   carritoItems=document.getElementById('carrito-items')
@@ -130,7 +132,19 @@ window.agregaCarrito = function(productId) {
         <td><button class="btn btn-danger" onclick="eliminarDelCarrito('${item.id}')">BORRAR</button></td>
       `;
       tbody.appendChild(tr);
-    });  
+    });
+    
+const neto = carrito.reduce((sum, item) => sum + item.cantidad * item.precio, 0);
+const iva = neto * 0.19;
+let bruto = neto + iva;
+const despacho = bruto < 200000 ? bruto * 0.05 : 0;
+bruto += despacho;
+
+carritoSummary.innerHTML = `<p><strong>Valor Neto:</strong> $${neto.toLocaleString()}</p>
+                            <p><strong>IVA 19%:</strong> $${iva.toLocaleString()}</p>
+            ${despacho > 0 ? `<p><strong>Despacho:</strong> $${despacho.toLocaleString()}</p>` : ''}
+                            <p><strong>Valor Bruto:</strong> $${bruto.toLocaleString()}</p>`
+
 };
 
   window.eliminarDelCarrito = function(productId) {
