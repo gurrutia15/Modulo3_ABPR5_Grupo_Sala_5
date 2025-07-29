@@ -15,14 +15,14 @@ const products = [
   { id: '012', imagen: './assets/images/product12.jpeg', nombre: "Mouse Gaming Pro RGB", codigo: "T012", descripcion: "16.000 DPI, 8 botones programables, iluminación RGB personalizable y diseño ergonómico para gaming prolongado.", precio: 49990 }
 ];
 
-let carrito= [];
-let carritoItems= null;
+let carrito = [];
+let carritoItems = null;
 
 const carritoSummary = document.getElementById('carrito-summary');
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const productList = document.getElementById('catalogo_productos');
-  carritoItems=document.getElementById('carrito-items')
+  carritoItems = document.getElementById('carrito-items')
 
   if (!productList) {
     console.error('No se encontró #catalogo_productos');
@@ -32,12 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
   if (!carritoItems) {
     console.error('No se encontró #carrito-items');
     return;
-  } 
-    if (productList) {
-        products.forEach(product => {
-            const col = document.createElement('div');
-            col.className = 'col-sm-12 col-md-4 mb-4';
-            col.innerHTML = `
+  }
+  if (productList) {
+    products.forEach(product => {
+      const col = document.createElement('div');
+      col.className = 'col-sm-12 col-md-4 mb-4';
+      col.innerHTML = `
                 <div class="card h-100">
                     <img src="${product.imagen}" class="card-img-top" alt="${product.nombre}">
                     <div class="card-body">
@@ -64,100 +64,113 @@ document.addEventListener('DOMContentLoaded', function() {
                       </div>
                 </div>
             `;
-            productList.appendChild(col);
-        });
-    }
+      productList.appendChild(col);
+    });
+  }
 });
 
-window.agregaCarrito = function(productId) {
-    const cantidadProducto = document.getElementById(`cinput-${productId}`);
-    if (!cantidadProducto) {
-      console.error(`Input cinput-${productId} no encontrado`);
-      return;
-    }
+window.agregaCarrito = function (productId) {
+  const cantidadProducto = document.getElementById(`cinput-${productId}`);
+  if (!cantidadProducto) {
+    console.error(`Input cinput-${productId} no encontrado`);
+    return;
+  }
 
-    const cantidad = parseInt(cantidadProducto.value, 10);
-    if (isNaN(cantidad) || cantidad <= 0) {
-      alert("Cantidad no válida");
-      return;
-    }
+  const cantidad = parseInt(cantidadProducto.value, 10);
+  if (isNaN(cantidad) || cantidad <= 0) {
+    alert("Cantidad no válida");
+    return;
+  }
 
-    const producto = products.find(p => p.id === productId);
-    if (!producto) return;
+  const producto = products.find(p => p.id === productId);
+  if (!producto) return;
 
-    const existente = carrito.find(item => item.id === productId);
-    if (existente) {
-      existente.cantidad += cantidad;
-    } else {
-      carrito.push({ ...producto, cantidad });
-    }
+  const existente = carrito.find(item => item.id === productId);
+  if (existente) {
+    existente.cantidad += cantidad;
+  } else {
+    carrito.push({ ...producto, cantidad });
+  }
 
-    cantidadProducto.value = 1;
-    renderCarrito();
-  };
+  cantidadProducto.value = 1;
+  renderCarrito();
+};
 
-  window.cambiarCantidad = function(id, delta) {
-    const input = document.getElementById(`cinput-${id}`);
-    if (!input) return;
-    let valor = parseInt(input.value) + delta;
-    if (valor < 1) valor = 1;
-    input.value = valor;
-  };
+window.cambiarCantidad = function (id, delta) {
+  const input = document.getElementById(`cinput-${id}`);
+  if (!input) return;
+  let valor = parseInt(input.value) + delta;
+  if (valor < 1) valor = 1;
+  input.value = valor;
+};
 
-  window.renderCarrito = function () {
-    const seccionCarrito = document.getElementById('seccion-carrito')
+window.renderCarrito = function () {
+  const seccionCarrito = document.getElementById('seccion-carrito')
   const tabla = document.getElementById('tabla-carrito');
   const tbody = tabla.querySelector('tbody');
+
   if (!tabla) {
     console.error('Tabla del carrito no encontrada');
     return;
   }
 
-  
   tbody.innerHTML = '';
 
   if (carrito.length === 0) {
-    seccionCarrito.style.display='none'
+    seccionCarrito.style.display = 'none'
     return
-  } 
-  seccionCarrito.style.display='block'
+  }
+  seccionCarrito.style.display = 'block'
 
   carrito.forEach(item => {
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
         <td>${item.nombre}</td>
         <td>${item.cantidad}</td>
         <td>$${item.precio.toLocaleString('es-CL')}</td>
         <td>$${(item.precio * item.cantidad).toLocaleString('es-CL')}</td>
         <td><button class="btn btn-danger" onclick="eliminarDelCarrito('${item.id}')">BORRAR</button></td>
       `;
-      tbody.appendChild(tr);
-    });
-    
-const neto = carrito.reduce((sum, item) => sum + item.cantidad * item.precio, 0);
-const iva = neto * 0.19;
-let bruto = neto + iva;
-const despacho = bruto < 200000 ? bruto * 0.05 : 0;
-bruto += despacho;
+    tbody.appendChild(tr);
+  });
 
-carritoSummary.innerHTML = `<p><strong>Valor Neto:</strong> $${neto.toLocaleString()}</p>
-                            <p><strong>IVA 19%:</strong> $${iva.toLocaleString()}</p>
-            ${despacho > 0 ? `<p><strong>Despacho:</strong> $${despacho.toLocaleString()}</p>` : ''}
-                            <p><strong>Valor Bruto:</strong> $${bruto.toLocaleString()}</p>`
+  const neto = carrito.reduce((sum, item) => sum + item.cantidad * item.precio, 0);
+  const iva = neto * 0.19;
+  let bruto = neto + iva;
+  const despacho = bruto < 100000 ? bruto * 0.05 : 0;
+  bruto += despacho;
 
+  carritoSummary.innerHTML = `<p><strong>Valor Neto:</strong> $${neto.toLocaleString('es-CL')}</p>
+                            <p><strong>IVA 19%:</strong> $${iva.toLocaleString('es-CL')}</p>
+            ${despacho > 0 ? `<p><strong>Despacho:</strong> $${despacho.toLocaleString('es-CL')}</p>` : '<p><strong>Despacho: ¡Envío gratis!</strong></p>'}
+                            <p><strong>Valor Bruto:</strong> $${bruto.toLocaleString('es-CL')}</p>
+                            <button type="button" class="btn btn-success" onclick="finalizarCompra()">Finalizar Compra</button>`
+
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+  localStorage.setItem('resumenCompra', JSON.stringify({
+    neto,iva,bruto,despacho
+  }));
 };
 
-  window.eliminarDelCarrito = function(productId) {
-    const index = carrito.findIndex(item => item.id === productId);
-    if (index !== -1) {
-      carrito.splice(index, 1);
-      renderCarrito();
-    }
-  };
+window.eliminarDelCarrito = function (productId) {
+  const index = carrito.findIndex(item => item.id === productId);
+  if (index !== -1) {
+    carrito.splice(index, 1);
+    renderCarrito();
+  }
+};
 
-  renderCarrito();
+renderCarrito();
 
-  // ==============================
+window.finalizarCompra = function() {
+  if (carrito.length === 0) {
+      alert('Agrega productos al carrito primero');
+      return;
+  }
+  window.location.href = 'boleta.html';
+};
+
+// ==============================
 
 /*const alert = document.querySelector('.form__button')
 
