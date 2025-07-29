@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Te Lo Vendo</title>
+  <link rel="icon" href="assets/images/tlv_icon.webp" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+<body>
+    <!-- ======================= HEADER ======================= -->
+  <header>
+  </header>
+
+  <main class="container text-center py-3 px-3 ">    
+    <!-- FORMULARIO DE DESPACHO -->
+    <div class="text-center py-2">
+      <div class="form-despacho">
+        <div class="text-center">
+          <h2>Formulario de Despacho</h2>
+          <h4>Ingresar datos del despacho:</h4>
+        </div>
+        <form>
+            <div class="form-row row text-start">
+                <div class="form-group col-md-6">
+                    <label for="nombreReceptor">Nombre receptor: </label>
+                    <input type="text" class="form-control" id="nombreReceptor" placeholder="Ingrese nombre de quien recibe"required> 
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email">Correo electrónico: </label>
+                    <input type="email" class="form-control" id="email" placeholder="tucorreo@mail.com"required> 
+                </div>
+            </div>
+            <div class="col text-start">
+              <div class="form-group">
+                <label for="direccion">Dirección: </label>
+                <input type="text" class="form-control" id="direccion" placeholder="Ingrese la dirección de despacho" required> 
+            </div>
+            </div>
+            
+            <div class="form-row row text-start">
+                <div class="form-group col-md-6">
+                    <label for="comuna">Comuna: </label>
+                    <input type="text" class="form-control" id="comuna" placeholder="Comuna"required> 
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="region">Región: </label>
+                    <select name="regiones" class="form-control" id="region">
+                    <option value="seleccionar" selected>Selecciona una región</option>
+                    <option value="region1">Región de Arica y Parinacota</option>
+                    <option value="region2">Región de Tarapacá</option>
+                    <option value="region3">Región de Antofagasta</option>
+                    <option value="region4">Región de Atacama</option>
+                    <option value="region5">Región de Coquimbo</option>
+                    <option value="region6">Región de Valparaíso</option>
+                    <option value="region7">Región Metropolitana</option>
+                    <option value="region8">Región del Libertador General Bernardo O'Higgins</option>
+                    <option value="region9">Región del Maule</option>
+                    <option value="region10">Región de Ñuble</option>
+                    <option value="region11">Región del Biobío </option>
+                    <option value="region12">Región de La Araucanía</option>
+                    <option value="region13">Región de Los Ríos</option>
+                    <option value="region14">Región de Los Lagos</option>
+                    <option value="region15">Región de Aysén del General Carlos Ibáñez del Campo</option>
+                    <option value="region16">Región de Magallanes y de la Antártica Chilena</option>
+                </select>
+                </div>
+            </div>
+            <br>
+            <button type="button" class="enviarDespacho" onclick="enviarDespacho()">Enviar</button>
+        </form>
+        </div>
+    </div>
+    <hr>
+        <!-- Boleta -->
+    <div class="">
+        <div class="boleta text-center">
+            <h2>Recibo de Compra</h2>
+            <div class="boleta-detalle text-start">
+                <h3>Detalle del producto:</h3>
+                    <table class="table" id="tabla-carrito">
+                        <thead>
+                            <tr>
+                                <th scope="col">Código</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Valor</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Valor Total</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+            </div>
+            <div class="boleta-resumen text-start">
+                <h3>Resumen de Compra: </h3>
+                <label for="montoNeto">Valor Neto: </label><p id="montoNeto"></p>
+                <label for="impuesto">Impuesto: </label><p id="impuesto"></p>
+                <label for="montoBruto">Valor Bruto: </label><p id="montoBruto"></p>
+            </div>
+            <div class="boleta-despacho text-start">
+                <h3>Dirección de despacho:</h3>
+                <label for="boleta-direccion">Dirección: </label><p id="boleta-direccion"></p>
+                <label for="boleta-comuna">Comuna: </label><p id="boleta-comuna"></p>
+                <label for="boleta-region">Región: </label><p id="boleta-region"></p>
+                <label for="boleta-nombreReceptor">Nombre receptor: </label><p id="boleta-nombreReceptor"></p>
+                <label for="boleta-email">Correo electrónico: </label><p id="boleta-email"></p>
+            </div>
+        </div>
+        <button type="button" class="btn btn-success" onclick="">Finalizar Compra</button>
+
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/boleta.js"></script>
+
+</body>
+
+</html>
