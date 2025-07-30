@@ -5,7 +5,6 @@ const modalElement = document.getElementById('exampleModal');
     event.preventDefault(); // Evita el envío del formulario
   }); 
   modalElement.addEventListener('shown.bs.modal', function () {
-    debugger;
     console.log("saludillos aquí")
     setTimeout(function () {
       modal.hide();
