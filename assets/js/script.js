@@ -135,7 +135,7 @@ window.renderCarrito = function () {
   });
 
   const neto = carrito.reduce((sum, item) => sum + item.cantidad * item.precio, 0);
-  const iva = neto * 0.19;
+  const iva = Math.trunc(neto * 0.19);
   let bruto = neto + iva;
   const despacho = bruto < 100000 ? bruto * 0.05 : 0;
   bruto += despacho;
