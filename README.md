@@ -2,6 +2,34 @@
 
 Un sitio web responsivo para una empresa de ventas online , desarrollado con metodología BEM y arquitectura CSS modular.
 
+## 🌟 Novedades en rama (`Modulo_4`)
+
+### Características implementadas:
+- **Catálogo interactivo** con productos dinámicos
+- **Sistema de carrito** con persistencia en `localStorage`
+- **Generación de boletas** con resumen de compra
+- **Formulario de despacho** validado
+
+## 📁 Estructura del Proyecto
+
+```
+Modelo 4 ABPRO1/
+├── assets/
+│   ├── css/   
+│   │   └── style.css      # Archivo de estilos
+│   ├── images/            # Imágenes del proyecto
+│   ├── js/           
+│   │   └── script.js      # Scripts JavaScript
+│   │   └── boleta.js      
+│   └── scss/              # Archivos SCSS 
+|       └── main.scss      # Archivo principal SCSS
+├── index.html             # Archivo HTML principal
+├── aboutus.html           # Página de información
+├── boleta.html            # Resumen de Compra
+├── catalog.html           # Catálogo de productos     
+├── contact.html           # Página de contacto
+└── README.md              # Este archivo
+```
 ## 🌟 Características Principales
 
 ### 🎨 Diseño y UX
@@ -18,103 +46,11 @@ Un sitio web responsivo para una empresa de ventas online , desarrollado con met
 ### ♿ Accesibilidad
 - **Contraste adecuado** en texto sobre imágenes
 - **Navegación semántica** con HTML5 estructurado
-
-## 📁 Estructura del Proyecto
-
-```
-Modelo 3 ABPRO3/
-├── assets/
-│   ├── css/   
-│   │   └── style.css      # Archivo de estilos
-│   ├── images/            # Imágenes del proyecto
-│   ├── scripts/           
-│   │   └── script.js      # Scripts JavaScript
-│   └── scss/              # Archivos SCSS 
-│       ├── abstracts/
-│       │   ├── _variables.scss
-│       │   ├── _mixins.scss
-│       │   ├── _functions.scss
-│       ├── base/
-│       │   ├── _base.scss
-│       │   ├── _reset.scss
-│       │   └── _typography.scss
-│       ├── components/
-│       │   ├── _buttons.scss
-│       │   ├── _cards.scss
-│       │   └── _form.scss
-│       ├── layout/
-│       │   ├── _header.scss
-│       │   ├── _hero.scss
-│       │   └── _footer.scss
-│       ├── pages/
-│       │   ├── _aboutus.scss
-│       │   ├── _contact.scss
-│       │   ├── _catalog.scss
-│       │   └── _home.scss
-│       ├── themes/
-│       │   └── _theme.scss
-│       ├── vendors/
-│       │   └── _custom.scss
-|       └── main.scss      # Archivo principal SCSS
-├── index.html             # Archivo HTML principal
-├── aboutus.html           # Página de información
-├── catalog.html           # Catálogo de productos     
-├── contact.html           # Página de contacto
-└── README.md              # Este archivo
-```
-
-## 🎯 Metodología BEM Implementada
-
-### Bloques Principales
-- `.header` - Cabecera del sitio
-- `.nav` - Navegación principal
-- `.hero` - Sección hero de la página principal
-- `.product-card` - Tarjetas de productos
-- `.footer` - Pie de página
-
-### Ejemplos de Nomenclatura BEM
-```css
-/* Bloque */
-{ }
-
-/* Elemento */
-{ }
-{ }
-
-/* Modificador */
-{ }
-{ }
-```
-
-## 🎨 Sistema de Diseño
-
-### Paleta de Colores
-```css
---color-primary: #E58E00
---color-secondary: #27AFC9
---color-accent: #FFBB02
---color-text: #c7a2445
---color-light: #B0A6A5
---color-dark: #6D5C55
---color-white: #FFFFFF;      /* Blanco */
-```
-
-### Tipografía
-- **Headings**: Tahoma
-- **Body**: 'Montserrat', sans-serif
-
-## 📱 Breakpoints Responsivos
-
-- **Móvil**: < 768px
-- **Desktop**: > 768px
-
+  
 ## 🚀 Funcionalidades
 
 ### Navegación
 - **Menú hamburguesa** en dispositivos móviles
-
-### Catálogo de Productos
-- **Filtrado** por categorías  
 
 ### Rendimiento
 - **Imports CSS** modulares para mejor carga
@@ -151,6 +87,6 @@ Modelo 3 ABPRO3/
 5. **Arquitectura de carpetas** estándar de la industria
 
 ## Integrantes
-<h3 align=center> Carolina Hernández | Gonzalo Urrutia | Luis Carrillo | Juan Luis Mansilla </h3>
+<h4 align=center> Carolina Hernández | Gonzalo Urrutia | Luis Carrillo | Juan Luis Mansilla </h4>
 
 ---
